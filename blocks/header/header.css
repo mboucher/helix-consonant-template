@@ -20,6 +20,10 @@ header {
   border-bottom: 2px solid #EAEAEA;
 }
 
+.brand-text-container {
+  color: #FA0F00;
+}
+
 nav {
     grid-template-areas: 'brand navlist search';
     grid-template-columns: auto 1fr auto auto;

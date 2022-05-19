@@ -55,8 +55,12 @@ export default async function decorate(block) {
     const brandText = container.querySelectorAll('.branding > div');
     brandText[0].classList.add('spectrum-Heading', 'spectrum-Heading--sizeM');
     brandTextContainer.append(brandText[0]);
-    brandText[1].classList.add('spectrum-Detail', 'spectrum-Detail--sizeM');
-    brandTextContainer.append(brandText[1]);
+    //Check for a sub-title
+    if(brandText.length > 1) {
+      brandText[1].classList.add('spectrum-Detail', 'spectrum-Detail--sizeM');
+      brandTextContainer.append(brandText[1]);
+    }
+    
     brandingAnchor.append(brandTextContainer);
 
     const branding = container.querySelector('.branding');
